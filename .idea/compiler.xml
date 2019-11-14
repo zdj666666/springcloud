@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="com.example.common.main" target="1.8" />
+      <module name="com.example.common.test" target="1.8" />
+      <module name="com.example.customer.main" target="1.8" />
+      <module name="com.example.customer.test" target="1.8" />
+      <module name="com.example.eureka.main" target="1.8" />
+      <module name="com.example.eureka.test" target="1.8" />
+      <module name="com.example.manager.main" target="1.8" />
+      <module name="com.example.manager.test" target="1.8" />
+      <module name="com.zero.springcloud.main" target="1.8" />
+      <module name="com.zero.springcloud.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

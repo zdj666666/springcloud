@@ -1,0 +1,66 @@
+
+server:
+  port: 1292
+
+mybatis:
+  type-aliases-package: com.example.demo.db.po
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+    use-generated-keys: true
+    default-fetch-size: 100
+    default-statement-timeout: 30
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 1230
+  http:
+    multipart:
+      maxFileSize: 10Mb
+      maxRequestSize: 100Mb
+  application:
+    name: eureka-manager
+  freemarker:
+    charset: UTF-8
+    suffix: .ftl
+    content-type: text/html; charset=utf-8
+    expose-request-attributes: true
+    allow-session-override: true
+    expose-spring-macro-helpers: true
+    settings:
+      datetime_format: yyyy-MM-dd HH:mm:ss
+      default_encoding: UTF-8
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.105.57.189:3306/knowledge?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: mysql
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat
+  redis:
+    host: 39.105.57.189
+    port: 6379
+    connectionTimeout: 5000
+    database: 0
+
+    pool:
+      max-idle: 8
+      min-idle: 0
+      max-active: 8
+      max-wait: -1
+
+  profiles:
+    active: produce
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1291/eureka/
+
+
+ip: 127.0.0.0
+port: 8080
+
