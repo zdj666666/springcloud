@@ -1,91 +1,59 @@
-buildscript {
-    ext {
-        springBootVersion = '2.1.1.RELEASE'
-    }
-    repositories {
-        maven {
-            url "https://maven.aliyun.com/repository/public"
-        }
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-    }
-}
-
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
-
-
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
-
-repositories {
-    maven {
-        url "https://maven.aliyun.com/repository/public"
-    }
-}
-
-
-
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter")
-    compile("org.springframework.boot:spring-boot-starter-freemarker")
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile('org.projectlombok:lombok')
-    compile("org.springframework.boot:spring-boot-starter-test")
-    compile("org.springframework.boot:spring-boot-starter")
-    compile("org.springframework.boot:spring-boot-starter-freemarker")
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-actuator")
-    compile('io.springfox:springfox-swagger2:2.8.0')
-    compile('io.springfox:springfox-swagger-ui:2.8.0')
-
-
-    compile 'io.swagger:swagger-jersey2-jaxrs:1.5.8'
-    compile('com.mangofactory:swagger-springmvc:1.0.2')
-    compile('com.mangofactory:swagger-models:1.0.2')
-    compile('com.wordnik:swagger-annotations:1.3.11')
-
-
-    /*实现reids的相关依赖*/
-    compile('redis.clients:jedis:2.9.0')
-    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '1.4.7.RELEASE'
-    compile('org.apache.tomcat.embed:tomcat-embed-jasper')
-    compile('com.alibaba:fastjson:1.2.41')
-    compile group: 'javax.mail', name: 'mail', version: '1.4.1'
-    compile('org.freemarker:freemarker')
-    compile('org.springframework.boot:spring-boot-starter-cache')
-    compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.0')
-    compile('org.apache.tomcat.embed:tomcat-embed-jasper')
-    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.34'
-    compile('javax.servlet:jstl')
-    compileOnly "javax.servlet:javax.servlet-api"
-    compile('org.springframework.boot:spring-boot-starter-mail')
-    compile group: 'javax.interceptor', name: 'javax.interceptor-api', version: '3.1'
-    compile('commons-httpclient:commons-httpclient:3.1')
-    compile( 'net.sf.json-lib:json-lib:2.4:jdk15')
-    compile group: 'com.aliyun.oss', name: 'aliyun-sdk-oss', version: '3.1.0'
-    compile("commons-beanutils:commons-beanutils:1.9.3")
-    /*实现mybatis自动配置sql*/
-    compile('tk.mybatis:mapper-spring-boot-starter:1.2.3')
-    compile('com.github.pagehelper:pagehelper-spring-boot-starter:1.2.10')
-
-    compile("org.springframework.cloud:spring-cloud-starter-eureka:1.4.5.RELEASE")
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.cloud:spring-cloud-dependencies:Dalston.SR1")
-    /*导入支付包付款依赖*/
-    // https://mvnrepository.com/artifact/com.alipay.sdk/alipay-sdk-java
-    compile group: 'com.alipay.sdk', name: 'alipay-sdk-java', version: '3.7.4.ALL'
-    //base64转换
-    compile("commons-codec:commons-codec:1.10")
-
-    compile("org.apache.poi:poi-scratchpad:3.17")
-
-    compile group: 'org.tmatesoft.svnkit', name: 'svnkit', version: '1.8.2'
+//    compile("org.springframework.boot:spring-boot-starter")
+//    compile("org.springframework.boot:spring-boot-starter-freemarker")
+      compile("org.springframework.boot:spring-boot-starter-web")
+//    compile('org.projectlombok:lombok')
+//    compile("org.springframework.boot:spring-boot-starter-test")
+//    compile("org.springframework.boot:spring-boot-starter")
+//    compile("org.springframework.boot:spring-boot-starter-freemarker")
+//    compile("org.springframework.boot:spring-boot-starter-web")
+//    compile("org.springframework.boot:spring-boot-starter-actuator")
+//    compile('io.springfox:springfox-swagger2:2.8.0')
+//    compile('io.springfox:springfox-swagger-ui:2.8.0')
+//
+//
+//    compile 'io.swagger:swagger-jersey2-jaxrs:1.5.8'
+//    compile('com.mangofactory:swagger-springmvc:1.0.2')
+//    compile('com.mangofactory:swagger-models:1.0.2')
+//    compile('com.wordnik:swagger-annotations:1.3.11')
+//
+//
+//    /*实现reids的相关依赖*/
+//    compile('redis.clients:jedis:2.9.0')
+//    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis
+//    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '1.4.7.RELEASE'
+//    compile('org.apache.tomcat.embed:tomcat-embed-jasper')
+//    compile('com.alibaba:fastjson:1.2.41')
+//    compile group: 'javax.mail', name: 'mail', version: '1.4.1'
+//    compile('org.freemarker:freemarker')
+//    compile('org.springframework.boot:spring-boot-starter-cache')
+//    compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.0')
+//    compile('org.apache.tomcat.embed:tomcat-embed-jasper')
+//    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.34'
+//    compile('javax.servlet:jstl')
+//    compileOnly "javax.servlet:javax.servlet-api"
+//    compile('org.springframework.boot:spring-boot-starter-mail')
+//    compile group: 'javax.interceptor', name: 'javax.interceptor-api', version: '3.1'
+//    compile('commons-httpclient:commons-httpclient:3.1')
+//    compile( 'net.sf.json-lib:json-lib:2.4:jdk15')
+//    compile group: 'com.aliyun.oss', name: 'aliyun-sdk-oss', version: '3.1.0'
+//    compile("commons-beanutils:commons-beanutils:1.9.3")
+//    /*实现mybatis自动配置sql*/
+//    compile('tk.mybatis:mapper-spring-boot-starter:1.2.3')
+//    compile('com.github.pagehelper:pagehelper-spring-boot-starter:1.2.10')
+//
+//    compile("org.springframework.cloud:spring-cloud-starter-eureka:1.4.5.RELEASE")
+//    compile("org.springframework.boot:spring-boot-starter-web")
+//    compile("org.springframework.cloud:spring-cloud-dependencies:Dalston.SR1")
+//    /*导入支付包付款依赖*/
+//    // https://mvnrepository.com/artifact/com.alipay.sdk/alipay-sdk-java
+//    compile group: 'com.alipay.sdk', name: 'alipay-sdk-java', version: '3.7.4.ALL'
+//    //base64转换
+//    compile("commons-codec:commons-codec:1.10")
+//
+//    compile("org.apache.poi:poi-scratchpad:3.17")
+//
+//    compile group: 'org.tmatesoft.svnkit', name: 'svnkit', version: '1.8.2'
 
 
 }

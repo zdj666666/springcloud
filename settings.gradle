@@ -1,1 +1,1 @@
-/*rootProject.name = 'Knowledgesales'*/include "cloud-common", "cloud-customer", "cloud-manager", "cloud-eureka"
+rootProject.name = 'springcloud'include 'cloud-common'include 'cloud-eureka'include 'cloud-customer'include 'cloud-manager'
