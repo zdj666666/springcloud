@@ -1,0 +1,75 @@
+spring:
+  application:
+    name: cloud-gateway
+
+server:
+  port: ${port:1230}
+
+eureka:
+#  instance:
+#    prefer-ip-address: true
+#    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+#    # ip-address: docker宿主机的IP
+#    # non-secure-port: docker映射出来的端口
+  client:
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:1291/eureka/
+
+zuul:
+  #hystrix信号量隔离策略时，配置最大信号数
+  semaphore:
+    maxSemaphores: 2000
+  async:
+    executor: #异步处理业务逻辑的线程池配置
+      coreSize: 100
+      maxSize: 200
+      keepAlive: 300
+    timeout: 12000 #servlet异步处理的等待时间，包括线程池无可用线程时，队列中的等待时间
+  # 这些http 头是不允许客户端向内部服务传递
+  sensitive-headers: Cookie, Set-Cookie, Authorization, USER_ID
+  #配置在配置文件中的路由信息
+  routes:
+    xlm-service:
+      path: /*
+      serviceId: cloud-manager
+
+
+hystrix:
+  command:
+    default:
+      circuitBreaker:
+        requestVolumeThreshold: 50
+        sleepWindowInMilliseconds: 5000
+        errorThresholdPercentage: 50
+      metrics:
+        rollingStats:
+          timeInMilliseconds: 20000
+      fallback:
+        enabled: false
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 25000
+          strategy: SEMAPHORE
+          semaphore:
+            maxConcurrentRequests: 200
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 3000
+  MaxTotalConnections: 1000 #连接池最大连接数
+  MaxConnectionsPerHost: 200 #每个host最大使用连接数
+  MaxAutoRetriesNextServer: 0
+
+cloud:
+  gateway:
+    ignore-login-urls: /demo/**
+
+
+    ignoreDecryptUrls:
+    ignore-encrypt-urls:
+    allowedOrigins: '*'
+    default-request-limit: # 默认限流配置
+      oneMinuteMaxCount: 2000
+      oneDayMaxCount: 1000000

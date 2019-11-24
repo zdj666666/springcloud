@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cloud-manager
+    name: cloud-customer
 
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -22,10 +22,10 @@ spring:
       max-active: 8
       max-wait: -1
 server:
-  port: 1292
+  port: 1293
 
 mybatis:
-  type-aliases-package: com.zero.manager
+  type-aliases-package: com.zero.customer
   mapper-locations: classpath*:/mapper/*Mapper.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
