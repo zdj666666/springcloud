@@ -10,7 +10,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-actuator")
 
-    compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:2.10')
+    compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.0')
     compile('org.apache.tomcat.embed:tomcat-embed-jasper')
     compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.34'
     compile('javax.servlet:jstl')
@@ -26,7 +26,7 @@ dependencies {
     compile('redis.clients:jedis')
     compile('org.springframework.boot:spring-boot-starter-data-redis')
     //compile('org.springframework.boot:spring-boot-starter-parent:1.5.8.RELEASE')
-    /*实现mybatis自动配置sql*/
+//    /*实现mybatis自动配置sql*/
 //    compile('tk.mybatis:mapper-spring-boot-starter:1.2.3')
 //    compile('com.github.pagehelper:pagehelper-spring-boot-starter:1.2.10')
 
