@@ -1,0 +1,15 @@
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-actuator')
+    compile("org.springframework.boot:spring-boot-starter-security")
+
+    compile("org.springframework.cloud:spring-cloud-starter-netflix-zuul")
+    compile("org.springframework.cloud:spring-cloud-starter-netflix-hystrix")
+    compile("org.springframework.cloud:spring-cloud-starter-netflix-ribbon")
+    compile("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client") {
+        // 将Jersey的包从依赖中删除，Spring Cloud就会自动配置一个基于Spring RestTemplate 的传输客户端
+        exclude group: "com.sun.jersey"
+        exclude group: "com.sun.jersey.contribs"
+    }
+}

@@ -1,1 +1,1 @@
-rootProject.name = 'springcloud'include 'cloud-common'include 'cloud-eureka'include 'cloud-customer'include 'cloud-manager'
+rootProject.name = 'springcloud'include 'cloud-common'include 'cloud-eureka'include 'cloud-gateway'include 'cloud-manager-api'include 'cloud-customer'include 'cloud-manager'

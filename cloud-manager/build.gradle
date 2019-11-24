@@ -1,26 +1,34 @@
 dependencies {
+    compile project(":cloud-manager-api")
 
+    compile("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+    compile("org.springframework.cloud:spring-cloud-starter-openfeign")
+    compile("io.github.openfeign:feign-httpclient")
+    compile("org.springframework.cloud:spring-cloud-starter-netflix-hystrix")
+    compile("org.springframework.cloud:spring-cloud-starter-netflix-ribbon")
 
-    compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.0')
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+
+    compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.0')
     compile('org.apache.tomcat.embed:tomcat-embed-jasper')
     compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.34'
     compile('javax.servlet:jstl')
     compileOnly "javax.servlet:javax.servlet-api"
-    compile('org.projectlombok:lombok')
-    compile("org.springframework.boot:spring-boot-starter-test")
-    compile("org.springframework.boot:spring-boot-starter")
-    compile("org.springframework.boot:spring-boot-starter-freemarker")
-    compile("org.springframework.boot:spring-boot-starter-web")
-    //compile("org.springframework.cloud:spring-cloud-starter-eureka:1.4.5.RELEASE")
-    compile("org.springframework.boot:spring-boot-starter-web")
+//    compile("org.springframework.boot:spring-boot-starter-test")
+//    compile("org.springframework.boot:spring-boot-starter")
+//    compile("org.springframework.boot:spring-boot-starter-freemarker")
+//    compile("org.springframework.boot:spring-boot-starter-web")
+//    //compile("org.springframework.cloud:spring-cloud-starter-eureka:1.4.5.RELEASE")
+//    compile("org.springframework.boot:spring-boot-starter-web")
     //compile("org.springframework.cloud:spring-cloud-dependencies:Dalston.SR1")
     compile("commons-beanutils:commons-beanutils:1.9.3")
     compile('redis.clients:jedis')
     compile('org.springframework.boot:spring-boot-starter-data-redis')
     //compile('org.springframework.boot:spring-boot-starter-parent:1.5.8.RELEASE')
-    /*实现mybatis自动配置sql*/
-    compile('tk.mybatis:mapper-spring-boot-starter:1.2.3')
-    compile('com.github.pagehelper:pagehelper-spring-boot-starter:1.2.10')
+//    /*实现mybatis自动配置sql*/
+//    compile('tk.mybatis:mapper-spring-boot-starter:1.2.3')
+//    compile('com.github.pagehelper:pagehelper-spring-boot-starter:1.2.10')
 
 }
 
