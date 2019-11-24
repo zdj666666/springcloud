@@ -1,0 +1,1 @@
+package com.zero.customer.enums;/** * All rights Reserved, Designed By Suixingpay. * * @author: 张得钧<zhang_dj @ suixingpay.com> * @date: 2019-11-24 14:24 * @Copyright: 2019 Suixingpay. All rights reserved. * 注意：本内容仅限于随行付支付有限公司内部传阅，禁止外泄以及用于其他的商业用途。 */public enum DBTypeEnum {    /**主库*/    MASTER,    /**从库1*/    SLAVE1,    /**从库2*/    SLAVE2;}

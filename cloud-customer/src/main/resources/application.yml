@@ -1,0 +1,41 @@
+#生产环境配置
+server:
+  #端口
+  port: 8070
+spring:
+  # 数据源配置
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      stat-view-servlet:
+        loginUsername: admin
+        loginPassword: 123456
+      validationQuery: SELECT 1
+      initialSize: 10
+      minIdle: 10
+      maxActive: 200
+      minEvictableIdleTimeMillis: 180000
+      testOnBorrow: false
+      testWhileIdle: true
+      removeAbandoned: true
+      removeAbandonedTimeout: 1800
+      logAbandoned: true
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 100
+    dynamic:
+      datasource:
+        master:
+          username: root
+          password: mysql
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://39.105.57.189:3306/knowledge?useUnicode=true&characterEncoding=utf8&useSSL=false&tinyInt1isBit=true
+        slave1:
+          username: root
+          password: mysql
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://39.105.57.189:3306/lesson?useUnicode=true&characterEncoding=utf8&useSSL=false&tinyInt1isBit=true
+
+
+
+
+
