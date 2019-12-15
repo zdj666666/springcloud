@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel>
-      <module name="com.example.common.main" target="1.8" />
-      <module name="com.example.common.test" target="1.8" />
-      <module name="com.example.customer.main" target="1.8" />
-      <module name="com.example.customer.test" target="1.8" />
-      <module name="com.example.eureka.main" target="1.8" />
-      <module name="com.example.eureka.test" target="1.8" />
-      <module name="com.example.manager.main" target="1.8" />
-      <module name="com.example.manager.test" target="1.8" />
-      <module name="com.zero.springcloud.main" target="1.8" />
-      <module name="com.zero.springcloud.test" target="1.8" />
-    </bytecodeTargetLevel>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-thread" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-thread" options="-parameters" />
+    </option>
   </component>
 </project>

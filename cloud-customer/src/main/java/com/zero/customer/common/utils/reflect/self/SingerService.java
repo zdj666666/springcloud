@@ -1,0 +1,1 @@
+package com.zero.customer.common.utils.reflect.self;public interface SingerService {    public void sing(String name);    public void dance(String name);}

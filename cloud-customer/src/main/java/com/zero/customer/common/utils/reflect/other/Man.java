@@ -1,0 +1,1 @@
+package com.zero.customer.common.utils.reflect.other;public interface Man {     void findObject(String name);}
