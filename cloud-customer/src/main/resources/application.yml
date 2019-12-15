@@ -34,7 +34,7 @@ spring:
           password: mysql
           driver-class-name: com.mysql.jdbc.Driver
           url: jdbc:mysql://39.105.57.189:3306/lesson?useUnicode=true&characterEncoding=utf8&useSSL=false&tinyInt1isBit=true
-
+name: zdjlesson
 
 
 

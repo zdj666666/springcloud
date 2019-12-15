@@ -1,12 +1,12 @@
+
 dependencies {
     compile project(":cloud-manager-api")
 
-    compile("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+   // compile("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     compile("org.springframework.cloud:spring-cloud-starter-openfeign")
     compile("io.github.openfeign:feign-httpclient")
-    compile("org.springframework.cloud:spring-cloud-starter-netflix-hystrix")
-    compile("org.springframework.cloud:spring-cloud-starter-netflix-ribbon")
-
+   // compile("org.springframework.cloud:spring-cloud-starter-netflix-hystrix")
+   // compile("org.springframework.cloud:spring-cloud-starter-netflix-ribbon")
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-actuator")
 
@@ -30,6 +30,7 @@ dependencies {
 //    compile('tk.mybatis:mapper-spring-boot-starter:1.2.3')
 //    compile('com.github.pagehelper:pagehelper-spring-boot-starter:1.2.10')
 
+
     //druid多数据源依赖
     compile("com.alibaba:druid-spring-boot-starter:1.1.10")
     compile("com.baomidou:mybatis-plus:2.1.4")
@@ -37,6 +38,9 @@ dependencies {
 
     //aop
     compile("org.springframework.boot:spring-boot-starter-aop")
+
+    //公共处理非空方法
+   compile('org.apache.commons:commons-lang3:3.4')
 
 
 }
