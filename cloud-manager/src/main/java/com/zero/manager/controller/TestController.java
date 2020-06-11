@@ -8,6 +8,6 @@ public class TestController implements TestApi {
 
     @Override
     public String test() {
-        return "null";
+        return "nqwe测试qweull";
     }
 }
